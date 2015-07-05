@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "MobClick.h"
 @interface AppDelegate ()
 
 @end
@@ -16,7 +16,14 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    // UMeng
+    [MobClick startWithAppkey:@"55988a7867e58eeb01006720" reportPolicy:BATCH channelId:@"AppStore"];
+    NSString *version = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
+    [MobClick setAppVersion:version];
+    [MobClick setLogEnabled:YES];
+    [MobClick setCrashReportEnabled:YES];
+    
     return YES;
 }
 
