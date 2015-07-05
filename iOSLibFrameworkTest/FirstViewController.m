@@ -7,8 +7,11 @@
 //
 
 #import "FirstViewController.h"
+#import "AsyncImageView.h"
+
 
 @interface FirstViewController ()
+@property (weak, nonatomic) IBOutlet UIImageView *showImageView;
 
 @end
 
@@ -17,6 +20,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    [self.showImageView setImageURL:[NSURL URLWithString:@"http://img5.duitang.com/uploads/item/201408/08/20140808183529_5ieye.jpeg"]];
+    
 }
 
 - (void)didReceiveMemoryWarning {

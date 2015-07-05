@@ -6,6 +6,7 @@ pod 'JSONModel'
 pod 'SQLitePersistentObject'
 pod 'MBProgressHUD'
 pod 'UMengAnalytics'
+pod 'JSQMessagesViewController'
 end
 
 target 'iOSLibFrameworkTestTests' do

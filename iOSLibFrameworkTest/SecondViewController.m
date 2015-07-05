@@ -7,7 +7,7 @@
 //
 
 #import "SecondViewController.h"
-
+#import "DemoMessagesViewController.h"
 @interface SecondViewController ()
 
 @end
@@ -22,6 +22,13 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+- (IBAction)showDemoVC:(id)sender {
+    DemoMessagesViewController *vc = [DemoMessagesViewController messagesViewController];
+    vc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end
